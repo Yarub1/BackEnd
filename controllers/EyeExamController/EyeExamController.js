@@ -47,7 +47,6 @@ export const getEyeExamsByPatientId = async (req, res) => {
       return res.status(404).json({ error: "Patient not found" });
     }
 
-    // تحويل الحقول المهيأة من HTML إلى نص عادي
     const eyeExams = patient.eyeExams.map((exam) => {
       return {
         ...exam.toJSON(),
