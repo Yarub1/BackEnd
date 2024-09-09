@@ -11,7 +11,7 @@ Rate Limiting: Implements rate limiting on login routes using express-rate-limit
 
 File Uploads: Supports uploading files using express-fileupload, with a temporary directory for processing and a permanent directory for storing files.
 
-Security Enhancements:
+#Security Enhancements:
 
 Helmet: Secures HTTP headers to protect against known web vulnerabilities.
 XSS Protection: Uses xss-clean middleware to prevent cross-site scripting (XSS) attacks.
