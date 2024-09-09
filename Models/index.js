@@ -14,7 +14,6 @@ import Supplier from "./Supplier/Supplier.js";
 import Purchase from "./Purchase/Purchase.js";
 import MedicalReport from "./MedicalReport/MedicalReport.js";
 
-// علاقات المرضى
 Patient.hasMany(Relationship, {
   foreignKey: "guardianId",
   as: "Children",
@@ -64,28 +63,23 @@ Relationship.belongsTo(Patient, { foreignKey: "childId", as: "Child" });
 Family.belongsTo(Patient, { foreignKey: "parentId", as: "Parent" });
 Family.belongsTo(Patient, { foreignKey: "childId", as: "Child" });
 
-// علاقات الملفات والمجلدات
 Folder.hasMany(File, { foreignKey: "folderId" });
 File.belongsTo(Folder, { foreignKey: "folderId" });
 
 Folder.belongsTo(Folder, { as: "ParentFolder", foreignKey: "parentFolderId" });
 
-// علاقات الملفات والتقارير الطبية
 File.hasMany(MedicalReport, { foreignKey: "fileId" });
 MedicalReport.belongsTo(File, { foreignKey: "fileId" });
 
-// علاقات المرضى مع الملفات والتقارير الطبية
 Patient.hasMany(File, { foreignKey: "patientId" });
 File.belongsTo(Patient, { foreignKey: "patientId" });
 
 Patient.hasMany(MedicalReport, { foreignKey: "patientId" });
 MedicalReport.belongsTo(Patient, { foreignKey: "patientId" });
 
-// علاقات المستلزمات والموردين
 Supply.belongsTo(Supplier, { foreignKey: "supplierId" });
 Supplier.hasMany(Supply, { foreignKey: "supplierId" });
 
-// علاقات المشتريات
 Purchase.belongsTo(Supply, { foreignKey: "supplyId" });
 Supply.hasMany(Purchase, { foreignKey: "supplyId" });
 
