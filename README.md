@@ -39,9 +39,6 @@ Installation
 Follow the steps below to install and run the project:
 
 1. Clone the repository:
-bash
-Copy code
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 2. Navigate into the project directory:
 bash
 Copy code
