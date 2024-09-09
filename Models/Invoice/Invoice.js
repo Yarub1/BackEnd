@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import sequelize from "../../config/database.js";
 import Patient from "../Patient/Patient.js";
 import Appointment from "../Appointment/Appointment.js";
-import Customer from "../Customer/Customer.js"; // استيراد نموذج الزبون
+import Customer from "../Customer/Customer.js"; 
 import moment from "moment";
 
 const Invoice = sequelize.define("Invoice", {
