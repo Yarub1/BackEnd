@@ -1,12 +1,11 @@
 // File: controllers/AppointmentController.js
 // File: controllers/AppointmentController.js
 import Appointment from "../../Models/Appointment/Appointment.js";
-import Invoice from "../../Models/Invoice/Invoice.js"; // استيراد نموذج الفاتورة
-import Patient from "../../Models/Patient/Patient.js"; // استيراد نموذج المريض
+import Invoice from "../../Models/Invoice/Invoice.js"; // 
+import Patient from "../../Models/Patient/Patient.js"; // 
 import xss from "xss";
 
 
-// إنشاء موعد جديد
 export const createAppointment = async (req, res) => {
   try {
     const { patientId, date, startTime, endTime, description, status, notes } =
