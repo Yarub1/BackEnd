@@ -1,8 +1,8 @@
 Clinic-Management Backend API Server
-Description
+#Description
 This project is a Node.js-based backend API server built using Express.js. It is designed for managing various healthcare-related operations such as managing patients, appointments, invoices, and more. The server is highly secured using multiple middlewares for security, including rate limiting, CSRF protection, and helmet for HTTP headers security. Additional features include file uploads, IP tracking, and user authentication via JWT tokens.
 
-Features
+#Features
 Authentication: Uses JWT-based authentication for securing routes and validating user sessions. Route protection is implemented using the verifyToken middleware.
 
 CSRF Protection: Integrated Cross-Site Request Forgery (CSRF) protection using csurf middleware, ensuring secure form submissions.
